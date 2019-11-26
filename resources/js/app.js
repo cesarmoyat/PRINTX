@@ -1,9 +1,45 @@
-window.onscroll = function() {scrollFunction()};
+var UIcontroller = (function() {
+    
+    var DOMstrings = {
+        nav_row: 'nav-row';
+        
+    };
+    
+    return {
+        
+        stickyNav: function () {
+            if (document.body.scrollTop < 15) {
+                document.querySelector(DOMstrings.nav_row).classList.remove('sticky');
+            } else {
+                document.querySelector(DOMstrings.nav_row).classList.add('sticky');
+            }
+        },
+        
+        getDOMstrings: function () {
+            return DOMstrings;
+        }
+    };
+    
+});
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("logo").style.fontSize = "30px";
-  } else {
-    document.getElementById("logo").style.fontSize = "90px";
-  }
-}
+var controller = (function() {
+    
+    var setupEventListeners = function(UIcntrl) {
+        var DOM = UIcntrl.getDOMstrings();
+        
+        
+        document.addEventListener('scroll', UIcntrl.stickyNav);
+    };
+    
+    return {
+        init: function() {
+            console.log('Application launched succesfully');
+            
+            
+            setupEventListeners();
+        }
+    };
+    
+})(UIcontroller);
+
+controller.init();
