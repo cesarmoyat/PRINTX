@@ -224,34 +224,34 @@ header {
 
 /* ---- NAV BAR COLORS ---- */
 
-.nav1:hover,
-.nav1:active {
+.nav-h-1:hover,
+.nav-h-1:active {
     color: #999;
     /*feeab4*/
 }
 
-.nav2:hover,
-.nav2:active {
+.nav-h-2:hover,
+.nav-h-2:active {
     color: #fa745b;
 }
 /*fcb14d*/
-.nav3:hover,
-.nav3:active {
+.nav-h-3:hover,
+.nav-h-3:active {
     color: #f84180;
 }
 
-.nav4:hover,
-.nav4:active {
+.nav-h-4:hover,
+.nav-h-4:active {
     color: #4eb8fd;
 }
 
-.nav5:hover,
-.nav5:active {
+.nav-h-5:hover,
+.nav-h-5:active {
     color: #85c14f;
 }
 
-.nav6:hover,
-.nav6:active {
+.nav-h-6:hover,
+.nav-h-6:active {
     color: #fdce47;
 }
 
