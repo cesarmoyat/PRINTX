@@ -129,29 +129,8 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/yellow-splash.jpg);
 }
 
-/* line 122, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.papo {
-  display: inline-block;
-  height: 50vh;
-  margin: 0;
-  top: 50%;
-  background-image: url(img/papo.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 103% 103%;
-  overflow: hidden;
-}
-
-/* line 134, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.papo-in {
-  height: 50vh;
-  background-image: url(img/papo.png), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  background-position: top;
-  background-size: 100% 100%;
-}
-
-/* ---- Video background ---- */
-/* line 144, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* ---- INDEX VIDEO BACKGROUND ---- */
+/* line 123, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #landing-background {
   display: block;
   min-width: 100%;
@@ -164,39 +143,51 @@ header {
 }
 
 /* ---- -- ---- */
-/* line 157, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 136, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .hero-text-box {
   position: absolute;
   width: 1140px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* line 165, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.logo-box {
-  display: inline-block;
-  margin-top: 2vh;
+/*---------------------------------------------------*/
+/*---- NAV BAR ----*/
+/*---------------------------------------------------*/
+/* line 148, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+.nav-row {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   height: 20vh;
+  transition: height 1s;
+}
+
+/* ---- LOGO ----*/
+/* line 156, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+#logo-box {
+  display: inline-block;
+  margin: 2vh 0;
+  height: 200px;
+  width: 200px;
   text-align: center;
 }
 
-/* line 170, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.logo-box img {
+/* line 162, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+#logo-box img {
   height: 125px;
   display: inline-block;
   margin: 0;
   padding: 0;
-  transition: height 0.4s;
+  transition: height 1.2s;
 }
 
-/* line 179, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 171, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #logo:hover,
 #logo:active {
   height: 135px;
 }
 
-/* line 184, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 176, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #logo-printx {
   color: white;
   font-size: 290%;
@@ -206,7 +197,7 @@ header {
   transform: translateY(-20%);
 }
 
-/* line 193, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 185, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #logo-sol {
   color: white;
   font-size: 75%;
@@ -215,23 +206,24 @@ header {
   transform: translateY(-160%);
 }
 
-/* ---- NAV BAR ---- */
-/* line 204, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* ---- NAV LINKS ----*/
+/* line 195, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .main-nav {
   list-style: none;
   display: inline-block;
   float: right;
 }
 
-/* line 209, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 199, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .main-nav li {
   display: inline-block;
   margin-top: 20px;
   padding: 10px;
   margin-left: 20px;
+  transition: margin 0.4s;
 }
 
-/* line 214, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 205, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .main-nav li a {
   display: inline-block;
   text-decoration: none;
@@ -244,69 +236,53 @@ header {
 }
 
 /* ---- STICKY NAV ----*/
-/* line 229, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 220, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .sticky {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
+  display: block;
+  min-width: 100%;
 }
 
-/* line 235, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.sticky .logo {
-  height: 100%;
-  margin: 5px;
-  display: none;
-}
-
-/* line 240, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.sticky .logo-simple {
-  display: inline-block;
-  height: 50px;
-  width: auto;
-  float: left;
-  margin: 10px 0;
-}
-
-/* line 247, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 224, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .sticky .nav-row {
-  height: auto;
+  height: 110px;
 }
 
-/* line 251, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 227, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+.sticky #logo-box {
+  height: 75px;
+}
+
+/* line 230, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+.sticky #logo {
+  height: inherit;
+}
+
+/* line 233, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .sticky .main-nav {
-  margin-top: 10px;
+  list-style: none;
+  display: inline-block;
+  float: right;
 }
 
-/* line 253, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 238, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .sticky .main-nav li {
-  margin-top: 0;
-  vertical-align: middle;
-  padding: 0 10px;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px;
+  margin-left: 20px;
 }
 
-/* line 257, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 243, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .sticky .main-nav li a {
   display: inline-block;
   text-decoration: none;
-  color: #222;
+  color: #fff;
   text-transform: uppercase;
   font-size: 90%;
   text-align: center;
   vertical-align: middle;
   transition: color 0.3s, border-bottom 0.3s;
-}
-
-/* line 272, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-#nav-s-3 .nav-row {
-  background-image: linear-gradient(rgba(239, 58, 114, 0.5), rgba(0, 0, 0, 0));
-}
-
-/* line 277, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
-.nav-row {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  height: auto;
 }
 
 /* ---- NAV BAR COLORS ---- */
@@ -316,45 +292,45 @@ header {
 /* Id. Corp - Azul */
 /* Gran For - Verde */
 /* Corte Laser - Amarillo */
-/* line 292, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 267, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-1:hover,
 #nav-h-1:active {
   color: #999;
   /*feeab4*/
 }
 
-/* line 298, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 273, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-2:hover,
 #nav-h-2:active {
   color: #fbb142;
 }
 
-/* line 303, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 278, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-3:hover,
 #nav-h-3:active {
   color: #ef3a72;
 }
 
-/* line 308, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 283, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-4:hover,
 #nav-h-4:active {
   color: #2bc0ee;
 }
 
-/* line 313, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 288, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-5:hover,
 #nav-h-5:active {
   color: #a1c84f;
 }
 
-/* line 318, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 293, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 #nav-h-6:hover,
 #nav-h-6:active {
   color: #fdce47;
 }
 
 /* ---- TEMP ELEMENTS ---- */
-/* line 325, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
+/* line 300, ../../../../../../Cesar Moya/Documents/Werk/PRINTX local/in scss/input.scss */
 .placeholder {
   height: 100vh;
   background: #f4f4f4;
