@@ -38,25 +38,25 @@ var UIcontroller = (function () {
             console.log(window.pageYOffset);*/
             if (window.pageYOffset <= sticky) {
                 document.querySelector(DOMstrings.nav_bar).classList.remove('sticky');
-                if (document.querySelector(DOMstrings.logoTxt1).style.display === 'none') {
-                    document.querySelector(DOMstrings.logoTxt1).style.display = 'block';
-                    animateCSS(DOMstrings.logoTxt1, 'fadeIn', 'faster', 0, 0, function () {
+                if (document.querySelector(DOMstrings.logoTxt1).style.visibility === 'hidden') {
+                    document.querySelector(DOMstrings.logoTxt1).style.visibility = 'visible';
+                    animateCSS(DOMstrings.logoTxt1, 'fadeIn', 'slow', 0, 0, function () {
                         return true;
                     });
-                    document.querySelector(DOMstrings.logoTxt2).style.display = 'block';
-                    animateCSS(DOMstrings.logoTxt2, 'fadeIn', 'faster', 0, 0, function () {
+                    document.querySelector(DOMstrings.logoTxt2).style.visibility = 'visible';
+                    animateCSS(DOMstrings.logoTxt2, 'fadeIn', 'fast', 0, 0, function () {
                         return true;
                     });
                 }
             } else {
                 document.querySelector(DOMstrings.nav_bar).classList.add('sticky');
                 /*Animation*/
-                if (document.querySelector(DOMstrings.logoTxt1).style.display === 'block') {
+                if (document.querySelector(DOMstrings.logoTxt1).style.visibility === 'visible') {
                     animateCSS(DOMstrings.logoTxt1, 'fadeOut', 'faster', 0, 0, function () {
-                        document.querySelector(DOMstrings.logoTxt1).style.display = 'none';
+                        document.querySelector(DOMstrings.logoTxt1).style.visibility = 'hidden';
                     });
                     animateCSS(DOMstrings.logoTxt2, 'fadeOut', 'faster', 0, 0, function () {
-                        document.querySelector(DOMstrings.logoTxt2).style.display = 'none';
+                        document.querySelector(DOMstrings.logoTxt2).style.visibility = 'hidden';
                     });
                 }
                 
