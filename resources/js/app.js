@@ -3,7 +3,8 @@ var UIcontroller = (function () {
     var DOMstrings = {
         nav_bar: 'nav',
         logoTxt1: '#logo-printx',
-        logoTxt2: '#logo-sol'
+        logoTxt2: '#logo-sol',
+        logo_txt: '#logo-txt'
         
     };
     
@@ -39,10 +40,13 @@ var UIcontroller = (function () {
             if (window.pageYOffset <= sticky) {
                 document.querySelector(DOMstrings.nav_bar).classList.remove('sticky');
                 if (document.querySelector(DOMstrings.logoTxt1).style.visibility === 'hidden') {
+                    
                     document.querySelector(DOMstrings.logoTxt1).style.visibility = 'visible';
+                    document.querySelector(DOMstrings.logo_txt).href = 'index.html';
                     animateCSS(DOMstrings.logoTxt1, 'fadeIn', 'slow', 0, 0, function () {
                         return true;
                     });
+                    
                     document.querySelector(DOMstrings.logoTxt2).style.visibility = 'visible';
                     animateCSS(DOMstrings.logoTxt2, 'fadeIn', 'fast', 0, 0, function () {
                         return true;
@@ -52,9 +56,13 @@ var UIcontroller = (function () {
                 document.querySelector(DOMstrings.nav_bar).classList.add('sticky');
                 /*Animation*/
                 if (document.querySelector(DOMstrings.logoTxt1).style.visibility === 'visible') {
+                    
                     animateCSS(DOMstrings.logoTxt1, 'fadeOut', 'faster', 0, 0, function () {
                         document.querySelector(DOMstrings.logoTxt1).style.visibility = 'hidden';
+                        document.querySelector(DOMstrings.logo_txt).removeAttribute('href');
+                        
                     });
+                    
                     animateCSS(DOMstrings.logoTxt2, 'fadeOut', 'faster', 0, 0, function () {
                         document.querySelector(DOMstrings.logoTxt2).style.visibility = 'hidden';
                     });
